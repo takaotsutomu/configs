@@ -1,3 +1,6 @@
+# macOS: Initialize Homebrew
+eval (/opt/homebrew/bin/brew shellenv)
+
 abbr -a yr 'cal -y'
 abbr -a c cargo
 abbr -a e nvim

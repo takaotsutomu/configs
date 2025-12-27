@@ -430,6 +430,10 @@ require("lazy").setup({
 					header = false,
 				})
 			end)
+			-- live grep to search file contents
+			vim.keymap.set('n', '<leader>s', function()
+				require'fzf-lua'.live_grep()
+			end)
 		end
 	},
 	-- LSP
@@ -605,6 +609,13 @@ require("lazy").setup({
 					border = "none"
 				},
 			})
+		end
+	},
+	-- git change indicators in the gutter
+	{
+		'lewis6991/gitsigns.nvim',
+		config = function()
+			require('gitsigns').setup()
 		end
 	},
 	-- language support
